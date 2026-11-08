@@ -65,14 +65,15 @@ h2.t{font-size:22px;font-weight:600;margin-bottom:6px}h2.t b{color:var(--red2);f
 .work h3{margin:12px 4px 2px;font-size:15px;font-weight:600}.work small{display:block;margin:0 4px 12px;color:var(--mute);font-size:12px}
 .work .btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.work .btn{padding:9px 8px;font-size:12.5px}
 /* story */
-.story{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:end;padding:28px 28px 0;overflow:hidden;position:relative}
+.story{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:stretch;padding:28px 28px 0;overflow:hidden;position:relative}
 .story::before{content:"";position:absolute;right:-60px;bottom:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(225,29,46,.4),transparent 70%)}
 .story .who{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .story .who img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--red)}
 .story .who b{display:block;line-height:1.2}.story .who span{font-size:12px;color:var(--red2)}
-.story p{color:#e2d2d2;font-size:13px;line-height:1.7;padding-bottom:20px}.story .btn{margin-bottom:26px}
-.story>img{position:relative;width:360px;max-width:100%;align-self:end}
-@media(max-width:820px){.story{grid-template-columns:1fr;padding:22px 20px 0}.story>img{margin:auto;width:260px}}
+.story>div:first-child{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-bottom:26px}
+.story p{color:#e2d2d2;font-size:15px;line-height:1.75;padding-bottom:20px}.story .btn{margin-bottom:0}
+.story>img{position:relative;width:360px;max-width:100%;align-self:end;display:block}
+@media(max-width:820px){.story{grid-template-columns:1fr;padding:22px 20px 0}.story>div:first-child{padding-bottom:8px}.story p{font-size:14px}.story>img{margin:auto;width:260px}}
 /* faq */
 details{align-self:start;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surf);transition:border-color .2s}
 details[open],details:hover{border-color:rgba(225,29,46,.6)}
