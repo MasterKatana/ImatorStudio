@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8e0000">
+<title>ImatorStudio</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+@font-face {
+  font-family: 'Minecraft';
+  src: url('fonts/Minecraft.woff2') format('woff2'),
+       url('fonts/Minecraft.ttf') format('truetype'),
+       url('fonts/Minecraft.otf') format('opentype');
+  font-display: swap;
+}
+
+:root {
+  --bar: #8e0000;
+  --bg: #b71c1c;
+  --card: #940f0f;
+  --text: #ffffff;
+  --line: rgba(255,255,255,.2);
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Minecraft', 'Silkscreen', 'Courier New', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; }
+
+.px {
+  font-family: 'Minecraft', 'Silkscreen', 'Courier New', monospace;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  line-height: 1.25;
+}
+
+header {
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  position: relative;
+  background: var(--bar);
+  z-index: 5;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 48px;
+  width: auto;
+  max-width: 55%;
+  object-fit: contain;
+}
+
+.burger {
+  width: 30px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger i {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.site-menu {
+  position: absolute;
+  top: 54px;
+  left: 14px;
+  min-width: 190px;
+  padding: 8px;
+  background: var(--bar);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.22);
+  z-index: 10;
+}
+
+.site-menu[hidden] { display: none; }
+
+.site-menu a {
+  display: block;
+  padding: 10px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.site-menu a:hover,
+.site-menu a:focus { background: rgba(255,255,255,.15); }
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px 20px 55px;
+}
+
+.intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 54px);
+  margin-bottom: 14px;
+}
+
+.intro p {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 15px;
+}
+
+.order-panel {
+  background: var(--card);
+  border-radius: 10px;
+  border-bottom: 2px solid #fff;
+  padding: 26px;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 34px;
+}
+
+.order-panel h2 {
+  font-size: clamp(20px, 3vw, 27px);
+  margin-bottom: 12px;
+}
+
+.order-panel > p {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact-button {
+  min-width: 190px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  color: #fff;
+  text-decoration: none;
+  background: #7e1010;
+  border: 1px solid rgba(255,255,255,.35);
+  border-bottom: 3px solid rgba(255,255,255,.75);
+  border-radius: 7px;
+  font-family: 'Minecraft', 'Courier New', monospace;
+  font-size: 14px;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  background: #aa2020;
+}
+
+.contact-button .symbol {
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-size: clamp(23px, 4vw, 32px);
+  margin: 0 0 20px;
+}
+
+.gallery-note {
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 13px;
+  margin: -10px auto 22px;
+  opacity: .9;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border-radius: 9px;
+  border-bottom: 2px solid #fff;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: rgba(0,0,0,.14);
+}
+
+.gallery-item p {
+  padding: 12px 14px;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.image-placeholder {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,.13);
+  color: rgba(255,255,255,.85);
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.image-placeholder strong {
+  font-family: 'Minecraft', 'Courier New', monospace;
+  font-size: 16px;
+}
+
+footer {
+  min-height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 12px;
+  background: var(--bar);
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  header { height: 50px; padding: 0 14px; }
+  .logo { height: 36px; }
+  .site-menu { top: 50px; }
+  main { padding: 30px 14px 40px; }
+  .order-panel { padding: 22px 16px; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+}
+
+@media (max-width: 440px) {
+  .gallery { grid-template-columns: 1fr; }
+  .gallery-item { max-width: 360px; width: 100%; margin: 0 auto; }
+  .contact-button { width: 100%; }
+}
+
+
+
+/* IMATOR STUDIO POLISH */
+:root { --bar:#8e0000; --footer-bg:var(--bar); --ease:cubic-bezier(.2,.75,.25,1); }
+html { scroll-behavior:smooth; }
+header, .site-header { box-shadow:0 3px 0 rgba(255,255,255,.10); }
+.header-tools { margin-left:auto; display:flex; align-items:center; gap:8px; position:relative; z-index:1003; }
+.site-footer { min-height:44px; background:var(--bar); color:#fff; display:flex; justify-content:center; align-items:center; padding:10px 14px; text-align:center; font-size:11px; letter-spacing:.02em; border-top:1px solid rgba(255,255,255,.2); }
+.site-footer span { opacity:.95; }
+.card, .member-card, .order-panel, .gallery-item, .method, .profile { transition:transform .35s var(--ease), box-shadow .35s ease, background .3s ease; }
+.card:hover, .member-card:hover, .gallery-item:hover, .method:hover { box-shadow:0 12px 28px rgba(65,0,0,.24); }
+.burger i { transition:transform .25s ease, opacity .2s ease; }
+.burger[aria-expanded="true"] i:first-child { transform:translateY(11px) rotate(45deg); }
+.burger[aria-expanded="true"] i:nth-child(2) { opacity:0; }
+.burger[aria-expanded="true"] i:last-child { transform:translateY(-11px) rotate(-45deg); }
+.site-menu { animation:menuPop .2s var(--ease); transform-origin:top left; }
+@keyframes menuPop { from {opacity:0; transform:translateY(-7px) scale(.98)} to {opacity:1; transform:none} }
+body.motion-ready main > *, body.motion-ready main section, body.motion-ready .member-card, body.motion-ready .gallery-item { animation:softEnter .65s var(--ease) both; }
+body.motion-ready main > *:nth-child(2), body.motion-ready main section:nth-child(2) { animation-delay:.07s; }
+body.motion-ready main > *:nth-child(3), body.motion-ready main section:nth-child(3) { animation-delay:.13s; }
+@keyframes softEnter { from {opacity:0; transform:translateY(14px)} to {opacity:1; transform:translateY(0)} }
+.avatar { transition:transform .3s var(--ease), box-shadow .3s ease; }
+.member-card:hover .avatar { transform:translateY(-3px) scale(1.04); box-shadow:0 0 0 4px rgba(255,255,255,.18); }
+.header-tools { gap:5px; }
+.site-logo, .logo { max-width:43%; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after {scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important;} }
+
+
+/* Refined pixel menu + navigation */
+.site-menu{
+  min-width:224px;padding:10px;background:linear-gradient(145deg,#a91515 0%,#790000 100%);
+  border:2px solid rgba(255,255,255,.55);border-top:3px solid #fff;border-radius:0 0 10px 10px;
+  box-shadow:0 12px 28px rgba(35,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.site-menu::before{
+  content:'NAVIGATION';display:block;padding:5px 10px 9px;color:rgba(255,255,255,.72);
+  font:10px 'Minecraft','Courier New',monospace;letter-spacing:.16em;border-bottom:1px solid rgba(255,255,255,.2);margin-bottom:6px;
+}
+.site-menu a{
+  position:relative;display:flex;align-items:center;gap:12px;margin:3px 0;padding:11px 12px;
+  border:1px solid transparent;border-radius:6px;font:12px 'Minecraft','Courier New',monospace;
+  letter-spacing:.025em;transition:background .18s ease,transform .18s ease,border-color .18s ease;
+}
+.site-menu a::before{
+  content:'>';display:grid;place-items:center;width:23px;height:23px;flex:0 0 23px;
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.35);border-radius:4px;
+  font: bold 15px Arial,sans-serif;
+}
+.site-menu a:hover,.site-menu a:focus-visible{
+  background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.38);transform:translateX(3px);outline:none;
+}
+.burger{padding:3px;border-radius:5px;transition:background .2s ease,box-shadow .2s ease}
+.burger:hover,.burger:focus-visible{background:rgba(255,255,255,.13);box-shadow:0 0 0 1px rgba(255,255,255,.35);outline:none}
+.burger i{box-shadow:0 1px 0 rgba(0,0,0,.12)}
+@media(max-width:440px){.site-menu{left:10px;min-width:210px}}
+
+
+/* Order page visual refinement */
+.order-panel{position:relative;overflow:hidden;background:linear-gradient(145deg,#a81717 0%,#850909 100%);box-shadow:0 8px 22px rgba(55,0,0,.16)}
+.order-panel::before{content:'✦';position:absolute;right:18px;top:10px;font:30px Arial,sans-serif;color:rgba(255,255,255,.16)}
+.order-panel h2{display:flex;align-items:center;justify-content:center;gap:10px}
+.order-panel h2::before{content:'✧';font:25px Arial,sans-serif;color:#fff}
+.contact-buttons{gap:16px}
+.contact-button{min-height:58px;min-width:210px;background:linear-gradient(180deg,#a51a1a,#741010);box-shadow:0 4px 0 rgba(40,0,0,.22),inset 0 1px 0 rgba(255,255,255,.13);font-size:12px}
+.contact-button .symbol{display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;border-radius:6px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);font-size:20px}
+.contact-button:hover{box-shadow:0 7px 0 rgba(40,0,0,.18),inset 0 1px 0 rgba(255,255,255,.18)}
+.gallery-heading{display:flex;align-items:center;justify-content:center;gap:12px}
+.gallery-heading::before,.gallery-heading::after{content:'';width:min(9vw,70px);height:2px;background:rgba(255,255,255,.55)}
+.gallery-item{border:1px solid rgba(255,255,255,.2);border-bottom:3px solid #fff;box-shadow:0 5px 14px rgba(50,0,0,.12)}
+.gallery-item img,.image-placeholder{transition:transform .35s ease}
+.gallery-item:hover img{transform:scale(1.035)}
+.gallery-item p{background:rgba(80,0,0,.14);font-size:12px}
+.image-placeholder strong{padding:7px 12px;border:1px solid rgba(255,255,255,.38);border-radius:5px;background:rgba(255,255,255,.08)}
+
+
+/* Consistent platform icon sizing */
+.contact-button .platform-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  object-fit: contain;
+  display: block;
+}
+</style>
+</head>
+
+<body id="top">
+<header>
+  <img class="logo" src="images/logo.png" alt="Minecraft Titles">
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <i></i><i></i><i></i>
+  </button>
+  <nav class="site-menu" id="site-menu" aria-label="Main navigation" hidden>
+    <a href="index.html">Home</a>
+    <a href="team.html">Our Team</a>
+    <a href="order.html">Order</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <h1 class="px">Place Your Order</h1>
+    <p>Want a custom Minecraft animation? Contact us on Telegram or Rubika to discuss your order.</p>
+  </section>
+
+  <section class="order-panel">
+    <h2 class="px">Ready to create something?</h2>
+    <p>Choose your preferred platform and send us a message with your idea, details, and any reference images.</p>
+    <div class="contact-buttons">
+      <!-- Replace YOUR_TELEGRAM_USERNAME with your real Telegram username. -->
+      <a class="contact-button" href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/?size=100&id=lUktdBVdL4Kb&format=png&color=000000" class="platform-icon" alt="Telegram"><span>Order on Telegram</span>
+      </a>
+      <!-- Replace YOUR_RUBIKA_USERNAME with your real Rubika username. -->
+      <a class="contact-button" href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/?size=100&id=MXgWEnD9zqEl&format=png&color=000000" class="platform-icon" alt="Rubika"><span>Order on Rubika</span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-label="Order examples">
+    <h2 class="gallery-heading px">Our Work | Your Ideas</h2>
+    <p class="gallery-note"></p>
+
+    <div class="gallery">
+      <!-- Put your image at images/order-example-1.jpg -->
+      <article class="gallery-item">
+        <img src="images/order-example-1.jpg" alt="Order example 1" loading="lazy">
+        <p>Idea 1</p>
+      </article>
+
+      <!-- Put your image at images/order-example-2.jpg -->
+      <article class="gallery-item">
+        <img src="images/order-example-2.jpg" alt="Order example 2" loading="lazy">
+        <p>Idea 2</p>
+      </article>
+
+      <!-- Put your image at images/order-example-3.jpg -->
+      <article class="gallery-item">
+        <img src="images/order-example-3.jpg" alt="Order example 3" loading="lazy">
+        <p>Idea 3</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const button = document.querySelector('.burger');
+  const menu = document.querySelector('.site-menu');
+  if (!button || !menu) return;
+
+  const closeMenu = () => {
+    menu.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  };
+
+  button.addEventListener('click', () => {
+    const willOpen = menu.hidden;
+    menu.hidden = !willOpen;
+    button.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!button.contains(event.target) && !menu.contains(event.target)) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+})();
+</script>
+
+<footer class="site-footer"><span>© ImatorStudio <span id="footer-year"></span></span></footer>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+<script>
+(() => {
+  const html=document.documentElement;
+  html.lang='en';
+  html.dir='ltr';
+  const menu=document.querySelector('.site-menu');
+
+  let soundOn=true,ctx=null,lastHover=0;
+  function tone(freq=520,duration=.045,type='sine',volume=.025){
+    if(!soundOn)return;
+    try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)(); if(ctx.state==='suspended')ctx.resume();
+      const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.setValueAtTime(freq,ctx.currentTime);g.gain.setValueAtTime(volume,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+duration);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+duration);
+    }catch(e){}
+  }
+  document.addEventListener('click',e=>{if(e.target.closest('a,button'))tone(440,.05,'square',.018)});
+  document.addEventListener('pointerover',e=>{if(e.target.closest('a,button')){const now=Date.now();if(now-lastHover>160){tone(740,.025,'sine',.009);lastHover=now}}});
+  if(menu){const burger=document.querySelector('.burger');burger?.addEventListener('click',()=>tone(menu.hidden?330:260,.06,'triangle',.02));}
+
+  document.body.classList.add('motion-ready');
+})();
+</script>
+</body>
+</html>
