@@ -1,5 +1,6 @@
 @font-face{font-family:'Minecraft';src:url('../fonts/Minecraft.woff2') format('woff2');font-display:swap}
-:root{--bg:#070505;--surf:#131010;--line:#2b1717;--red:#e11d2e;--red2:#ff4455;--glow:rgba(225,29,46,.35);--mute:#b9a9a9;--px:'Minecraft','Courier New',monospace;--ease:cubic-bezier(.2,.75,.25,1)}
+@font-face{font-family:'RooyinFree';src:url('../fonts/RooyinFree-Regular.ttf') format('truetype');font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200D}
+:root{--bg:#070505;--surf:#131010;--line:#2b1717;--red:#e11d2e;--red2:#ff4455;--glow:rgba(225,29,46,.35);--mute:#b9a9a9;--px:'Minecraft','RooyinFree','Courier New',monospace;--ease:cubic-bezier(.2,.75,.25,1)}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:#fff;font:400 15px/1.65 var(--px);min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden;
@@ -8,13 +9,13 @@ img{max-width:100%;display:block}a{color:inherit}
 .px{font-family:var(--px);font-weight:400;letter-spacing:.03em;text-transform:uppercase}
 /* header */
 header{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:50;width:min(1100px,calc(100% - 24px));margin:10px auto 0}
-.bar{position:relative;display:flex;align-items:center;gap:10px;height:58px;padding:0 12px 0 18px;border:1px solid var(--line);border-radius:18px;background:rgba(10,7,7,.82);backdrop-filter:blur(14px)}
+.bar{position:relative;display:flex;align-items:center;gap:10px;height:58px;padding:0;padding-inline:18px 12px;border:1px solid var(--line);border-radius:18px;background:rgba(10,7,7,.82);backdrop-filter:blur(14px)}
 .brand img{height:30px;width:auto}
 nav.main{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:6px}
 nav.main a{font-size:13px;font-weight:500;text-decoration:none;padding:7px 15px;border:1px solid var(--line);border-radius:99px;background:var(--surf);transition:.2s}
 nav.main a:hover{border-color:var(--red);box-shadow:0 0 14px var(--glow)}
 nav.main a[aria-current]{background:rgba(225,29,46,.22);border-color:var(--red)}
-.right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.right{margin-inline-start:auto;display:flex;gap:8px;align-items:center}
 .burger{background:var(--surf);border:1px solid var(--line);border-radius:12px;color:#fff;font:11px var(--px);height:36px;padding:0 11px;cursor:pointer}
 
 .burger{display:none;width:40px;flex-direction:column;justify-content:center;gap:5px;padding:0 10px}
@@ -66,7 +67,7 @@ h2.t{font-size:22px;font-weight:600;margin-bottom:6px}h2.t b{color:var(--red2);f
 .work .btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.work .btn{padding:9px 8px;font-size:12.5px}
 /* story */
 .story{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:stretch;padding:28px 28px 0;overflow:hidden;position:relative}
-.story::before{content:"";position:absolute;right:-60px;bottom:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(225,29,46,.4),transparent 70%)}
+.story::before{content:"";position:absolute;inset-inline-end:-60px;bottom:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(225,29,46,.4),transparent 70%)}
 .story .who{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .story .who img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--red)}
 .story .who b{display:block;line-height:1.2}.story .who span{font-size:12px;color:var(--red2)}
@@ -124,3 +125,15 @@ footer{width:min(1100px,calc(100% - 24px));margin:60px auto 14px;padding:26px 28
 .nf-img{width:120px;height:auto;margin:6px auto 4px;image-rendering:pixelated;display:block}
 .nf-card h2{margin:10px 0 22px}.nf-card p{color:var(--mute);max-width:440px;margin:0 auto 20px}
 .nf-card .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* language button */
+.btn.lang{min-width:58px;padding:8px 12px}
+
+/* Persian / RTL */
+html[lang=fa]{--px:'RooyinFree','Minecraft','Courier New',monospace}
+html[lang=fa] body{line-height:1.9}
+html[lang=fa] .px,html[lang=fa] *{letter-spacing:0!important;text-transform:none!important}
+html[lang=fa] .feat h3,html[lang=fa] .work h3,html[lang=fa] summary{line-height:1.6}
+@media(min-width:821px){html[dir=rtl] .story>img{transform:scaleX(-1)}}
+/* handles like @name always read left-to-right, even on the RTL (Persian) layout */
+.handle{direction:ltr;unicode-bidi:isolate}

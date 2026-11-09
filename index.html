@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta charset="utf-8"><script>if(/^https?:/.test(location.protocol)&&/\.html$/.test(location.pathname)){location.replace(location.pathname.replace(/(^|\/)(index)?\.html$/,"$1").replace(/\.html$/,"")+location.search+location.hash)}</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ImatorStudio | Minecraft Animation</title><meta name="description" content="Smooth, creative Minecraft animations made from your ideas.">
+<meta charset="utf-8"><script>try{if(localStorage.getItem("lang")==="fa"){var h=document.documentElement;h.lang="fa";h.dir="rtl"}}catch(e){}</script><script>if(/^https?:/.test(location.protocol)&&/\.html$/.test(location.pathname)){location.replace(location.pathname.replace(/(^|\/)(index)?\.html$/,"$1").replace(/\.html$/,"")+location.search+location.hash)}</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.index.title">ImatorStudio | Minecraft Animation</title><meta name="description" content="Smooth, creative Minecraft animations made from your ideas." data-i18n-attr="content:meta.index.desc">
 <link rel="icon" type="image/webp" href="images/favicon.webp"><link rel="apple-touch-icon" href="images/favicon.webp">
 <link rel="stylesheet" href="css/style.css">
 </head><body>
 <header><div class="bar">
 <a class="brand" href="/"><img src="images/logo.webp" alt="ImatorStudio"></a>
-<nav class="main" id="menu" aria-label="Main navigation"><a href="/">Home</a><a href="/team">Our Team</a><a href="/order">Order</a></nav>
-<div class="right"><a class="btn sm" href="/order">Order</a>
-<button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></div>
+<nav class="main" id="menu" aria-label="Main navigation" data-i18n-attr="aria-label:aria.nav"><a href="/" data-i18n="nav.home">Home</a><a href="/team" data-i18n="nav.team">Our Team</a><a href="/order" data-i18n="nav.order">Order</a></nav>
+<div class="right"><a class="btn sm" href="/order" data-i18n="nav.order">Order</a>
+<button class="btn ghost sm lang" id="langBtn" type="button" aria-label="Switch language" data-i18n-attr="aria-label:aria.lang">فارسی</button>
+<button class="burger" type="button" aria-label="Menu" data-i18n-attr="aria-label:aria.menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></div>
 </div></header>
 <main>
 <section class="hero" style="margin-top:46px">
 <div class="hero-card">
 <img class="logo" src="images/logo.webp" alt="ImatorStudio">
-<h1 class="px">Your idea. Our animation.</h1>
-<p class="lead">We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p>
-<div class="chips"><span class="chip">Fast</span><span class="chip">Smooth</span><span class="chip">Creative</span><span class="chip">Custom orders</span></div>
-<div class="cta"><a class="btn" href="/order">Order Now</a><a class="btn ghost" href="/team">Meet the Team</a></div>
+<h1 class="px" data-i18n="hero.h1">Your idea. Our animation.</h1>
+<p class="lead" data-i18n="about.blurb">We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p>
+<div class="chips"><span class="chip" data-i18n="chip.fast">Fast</span><span class="chip" data-i18n="chip.smooth">Smooth</span><span class="chip" data-i18n="chip.creative">Creative</span><span class="chip" data-i18n="chip.custom">Custom orders</span></div>
+<div class="cta"><a class="btn" href="/order" data-i18n="hero.order">Order Now</a><a class="btn ghost" href="/team" data-i18n="hero.meet">Meet the Team</a></div>
 </div></section>
 
-<section class="reveal"><h2 class="t">What <b>we offer</b></h2>
-<p class="sub">We deliver clean, smooth and professionally crafted animations with fluid movements and the quality your project deserves.</p>
+<section class="reveal"><h2 class="t" data-i18n="offer.h2">What <b>we offer</b></h2>
+<p class="sub" data-i18n="offer.sub">We deliver clean, smooth and professionally crafted animations with fluid movements and the quality your project deserves.</p>
 <div class="grid g4">
-<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>Fast</h3><p>We create Minecraft animations quickly and efficiently, bringing your ideas to life in less time.</p></article>
-<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12c3-6 6-6 9 0s6 6 9 0"/></svg></span>Smooth</h3><p>Natural, fluid movements and detailed scenes that give your project a clean look.</p></article>
-<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.800 6.300.800-4.600 4.300 1.200 6.300L12 17.200 6.400 20.200l1.200-6.300L3 9.600l6.300-.800z"/></svg></span>Creative</h3><p>We bring unique ideas to life through creative Minecraft animations and original scenes.</p></article>
-<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.700c.6.500 1 1.200 1 2V17h6v-.300c0-.800.400-1.500 1-2A7 7 0 0 0 12 2z"/></svg></span>Your ideas</h3><p>Tell us what you imagine and we turn it into a finished animation, scene by scene.</p></article>
+<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><span data-i18n="feat.fast">Fast</span></h3><p data-i18n="feat.fast.p">We create Minecraft animations quickly and efficiently, bringing your ideas to life in less time.</p></article>
+<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12c3-6 6-6 9 0s6 6 9 0"/></svg></span><span data-i18n="feat.smooth">Smooth</span></h3><p data-i18n="feat.smooth.p">Natural, fluid movements and detailed scenes that give your project a clean look.</p></article>
+<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.800 6.300.800-4.600 4.300 1.200 6.300L12 17.200 6.400 20.200l1.200-6.300L3 9.600l6.300-.800z"/></svg></span><span data-i18n="feat.creative">Creative</span></h3><p data-i18n="feat.creative.p">We bring unique ideas to life through creative Minecraft animations and original scenes.</p></article>
+<article class="feat"><h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.700c.6.500 1 1.200 1 2V17h6v-.300c0-.800.400-1.500 1-2A7 7 0 0 0 12 2z"/></svg></span><span data-i18n="feat.ideas">Your ideas</span></h3><p data-i18n="feat.ideas.p">Tell us what you imagine and we turn it into a finished animation, scene by scene.</p></article>
 </div></section>
 
-<section class="reveal"><h2 class="t">Our work <b>| Your ideas</b></h2>
-<p class="sub">A few ideas to get you started. Want something similar? Send us your idea.</p>
-<div class="grid g3 reveal"><article class="work"><div class="th"><img src="images/order-example-1.webp" alt="Idea 1" loading="lazy"></div><h3>Idea 1</h3><small>Minecraft animation</small><div class="btns"><a class="btn" href="/order">Order similar</a><a class="btn ghost" href="images/order-example-1.webp" target="_blank" rel="noopener">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-2.webp" alt="Idea 2" loading="lazy"></div><h3>Idea 2</h3><small>Minecraft animation</small><div class="btns"><a class="btn" href="/order">Order similar</a><a class="btn ghost" href="images/order-example-2.webp" target="_blank" rel="noopener">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-3.webp" alt="Idea 3" loading="lazy"></div><h3>Idea 3</h3><small>Minecraft animation</small><div class="btns"><a class="btn" href="/order">Order similar</a><a class="btn ghost" href="images/order-example-3.webp" target="_blank" rel="noopener">Preview</a></div></article></div></section>
+<section class="reveal"><h2 class="t" data-i18n="work.h2">Our work <b>| Your ideas</b></h2>
+<p class="sub" data-i18n="work.sub1">A few ideas to get you started. Want something similar? Send us your idea.</p>
+<div class="grid g3 reveal"><article class="work"><div class="th"><img src="images/order-example-1.webp" alt="Idea 1" loading="lazy"></div><h3 data-i18n="work.idea1">Idea 1</h3><small data-i18n="work.small">Minecraft animation</small><div class="btns"><a class="btn" href="/order" data-i18n="work.similar">Order similar</a><a class="btn ghost" href="images/order-example-1.webp" target="_blank" rel="noopener" data-i18n="work.preview">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-2.webp" alt="Idea 2" loading="lazy"></div><h3 data-i18n="work.idea2">Idea 2</h3><small data-i18n="work.small">Minecraft animation</small><div class="btns"><a class="btn" href="/order" data-i18n="work.similar">Order similar</a><a class="btn ghost" href="images/order-example-2.webp" target="_blank" rel="noopener" data-i18n="work.preview">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-3.webp" alt="Idea 3" loading="lazy"></div><h3 data-i18n="work.idea3">Idea 3</h3><small data-i18n="work.small">Minecraft animation</small><div class="btns"><a class="btn" href="/order" data-i18n="work.similar">Order similar</a><a class="btn ghost" href="images/order-example-3.webp" target="_blank" rel="noopener" data-i18n="work.preview">Preview</a></div></article></div></section>
 
-<section class="reveal"><h2 class="t">Where <b>we started</b></h2>
+<section class="reveal"><h2 class="t" data-i18n="story.h2">Where <b>we started</b></h2>
 <div class="glass story" style="margin-top:16px"><div style="position:relative">
-<div class="who"><img src="images/team/member-1.webp" alt="MrKatana"><div><b>Note from MrKatana</b><span>Founder</span></div></div>
-<p>It all started with a simple Rubika channel and a small team with a big dream. We shared a passion for creating something special and even made a short film together, marking the beginning of our journey. Along the way, we learned a lot, improved our skills, and built memories that will always be part of our story. After three years away, we're back with fresh ideas, bigger goals, and renewed motivation. We're excited to bring new projects to life, reconnect with our community, and push our creativity further than ever before. This is a new chapter, and we're ready to come back stronger than ever.</p>
-<a class="btn ghost" href="/team">Meet the team</a></div>
+<div class="who"><img src="images/team/member-1.webp" alt="MrKatana"><div><b data-i18n="story.note">Note from MrKatana</b><span data-i18n="role.founder">Founder</span></div></div>
+<p data-i18n="story.p">It all started with a simple Rubika channel and a small team with a big dream. We shared a passion for creating something special and even made a short film together, marking the beginning of our journey. Along the way, we learned a lot, improved our skills, and built memories that will always be part of our story. After three years away, we're back with fresh ideas, bigger goals, and renewed motivation. We're excited to bring new projects to life, reconnect with our community, and push our creativity further than ever before. This is a new chapter, and we're ready to come back stronger than ever.</p>
+<a class="btn ghost" href="/team" data-i18n="hero.meet">Meet the team</a></div>
 <img src="images/character.webp" alt="MrKatana"></div></section>
 
-<section class="reveal"><h2 class="t">Frequently <b>asked questions</b></h2>
+<section class="reveal"><h2 class="t" data-i18n="faq.h2">Frequently <b>asked questions</b></h2>
 <div class="grid g2" style="margin-top:16px">
-<details><summary>How do I place an order?</summary><p>Message us on Telegram or Rubika with your idea, details and any reference images. The order page has both links.</p></details>
-<details><summary>What do you make?</summary><p>Custom Minecraft animations, built from your ideas with smooth movements and creative scenes.</p></details>
-<details><summary>Can I send reference images?</summary><p>Yes. Reference images help us understand your idea, so send as many as you like with your message.</p></details>
-<details><summary>Who is behind ImatorStudio?</summary><p>A small team led by founder MrKatana. You can meet everyone on the team page.</p></details>
+<details><summary data-i18n="faq.q1">How do I place an order?</summary><p data-i18n="faq.a1">Message us on Telegram or Rubika with your idea, details and any reference images. The order page has both links.</p></details>
+<details><summary data-i18n="faq.q2">What do you make?</summary><p data-i18n="faq.a2">Custom Minecraft animations, built from your ideas with smooth movements and creative scenes.</p></details>
+<details><summary data-i18n="faq.q3">Can I send reference images?</summary><p data-i18n="faq.a3">Yes. Reference images help us understand your idea, so send as many as you like with your message.</p></details>
+<details><summary data-i18n="faq.q4">Who is behind ImatorStudio?</summary><p data-i18n="faq.a4">A small team led by founder MrKatana. You can meet everyone on the team page.</p></details>
 </div></section>
 </main>
-<footer><div class="ft"><div class="about"><img src="images/logo.webp" alt="ImatorStudio"><p>We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p></div>
-<div class="cols"><div><h4>Pages</h4><a href="/">Home</a><a href="/team">Our Team</a><a href="/order">Order</a></div>
-<div><h4>Contact</h4><a href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer">Rubika ↗</a></div></div></div>
+<footer><div class="ft"><div class="about"><img src="images/logo.webp" alt="ImatorStudio"><p data-i18n="about.blurb">We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p></div>
+<div class="cols"><div><h4 data-i18n="footer.pages">Pages</h4><a href="/" data-i18n="nav.home">Home</a><a href="/team" data-i18n="nav.team">Our Team</a><a href="/order" data-i18n="nav.order">Order</a></div>
+<div><h4 data-i18n="footer.contact">Contact</h4><a href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer" data-i18n="footer.tg">Telegram ↗</a><a href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer" data-i18n="footer.rb">Rubika ↗</a></div></div></div>
 <div class="copy">© ImatorStudio <span class="year"></span>.</div></footer>
+<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
 </body></html>

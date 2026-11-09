@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta charset="utf-8"><script>if(/^https?:/.test(location.protocol)&&/\.html$/.test(location.pathname)){location.replace(location.pathname.replace(/(^|\/)(index)?\.html$/,"$1").replace(/\.html$/,"")+location.search+location.hash)}</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Order | ImatorStudio</title><meta name="description" content="Order a custom Minecraft animation from ImatorStudio.">
+<meta charset="utf-8"><script>try{if(localStorage.getItem("lang")==="fa"){var h=document.documentElement;h.lang="fa";h.dir="rtl"}}catch(e){}</script><script>if(/^https?:/.test(location.protocol)&&/\.html$/.test(location.pathname)){location.replace(location.pathname.replace(/(^|\/)(index)?\.html$/,"$1").replace(/\.html$/,"")+location.search+location.hash)}</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.order.title">Order | ImatorStudio</title><meta name="description" content="Order a custom Minecraft animation from ImatorStudio." data-i18n-attr="content:meta.order.desc">
 <link rel="icon" type="image/webp" href="images/favicon.webp"><link rel="apple-touch-icon" href="images/favicon.webp">
 <link rel="stylesheet" href="css/style.css">
 </head><body>
 <header><div class="bar">
 <a class="brand" href="/"><img src="images/logo.webp" alt="ImatorStudio"></a>
-<nav class="main" id="menu" aria-label="Main navigation"><a href="/">Home</a><a href="/team">Our Team</a><a href="/order">Order</a></nav>
-<div class="right"><a class="btn sm" href="/order">Order</a>
-<button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></div>
+<nav class="main" id="menu" aria-label="Main navigation" data-i18n-attr="aria-label:aria.nav"><a href="/" data-i18n="nav.home">Home</a><a href="/team" data-i18n="nav.team">Our Team</a><a href="/order" data-i18n="nav.order">Order</a></nav>
+<div class="right"><a class="btn sm" href="/order" data-i18n="nav.order">Order</a>
+<button class="btn ghost sm lang" id="langBtn" type="button" aria-label="Switch language" data-i18n-attr="aria-label:aria.lang">فارسی</button>
+<button class="burger" type="button" aria-label="Menu" data-i18n-attr="aria-label:aria.menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></div>
 </div></header>
 <main>
-<div class="page-head"><h1 class="px">Place your order</h1><p>Want a custom Minecraft animation? Contact us on Telegram or Rubika to discuss your order.</p></div>
-<section class="glass order-card reveal" style="margin-top:34px"><h2 class="t">Ready to create <b>something?</b></h2>
-<p>Choose your preferred platform and send us a message with your idea, details, and any reference images.</p>
+<div class="page-head"><h1 class="px" data-i18n="order.h1">Place your order</h1><p data-i18n="order.p1">Want a custom Minecraft animation? Contact us on Telegram or Rubika to discuss your order.</p></div>
+<section class="glass order-card reveal" style="margin-top:34px"><h2 class="t" data-i18n="order.h2">Ready to create <b>something?</b></h2>
+<p data-i18n="order.p2">Choose your preferred platform and send us a message with your idea, details, and any reference images.</p>
 <div class="cta">
-<a class="btn" href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/?size=100&id=lUktdBVdL4Kb&format=png&color=ffffff" alt="">Order on Telegram</a>
-<a class="btn ghost" href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/?size=100&id=MXgWEnD9zqEl&format=png&color=ffffff" alt="">Order on Rubika</a></div></section>
+<a class="btn" href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/?size=100&id=lUktdBVdL4Kb&format=png&color=ffffff" alt=""><span data-i18n="order.tg">Order on Telegram</span></a>
+<a class="btn ghost" href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/?size=100&id=MXgWEnD9zqEl&format=png&color=ffffff" alt=""><span data-i18n="order.rb">Order on Rubika</span></a></div></section>
 <section class="reveal" style="margin-top:44px"><div class="grid g3">
-<div class="glass step"><b>01</b><h3>Your idea</h3><p>Tell us what you want to see.</p></div>
-<div class="glass step"><b>02</b><h3>The details</h3><p>Describe scenes, characters and anything that matters.</p></div>
-<div class="glass step"><b>03</b><h3>Reference images</h3><p>Send images so we can match your vision.</p></div></div></section>
-<section class="reveal"><h2 class="t">Our work <b>| Your ideas</b></h2><p class="sub">Get inspired by a few examples.</p><div class="grid g3 reveal"><article class="work"><div class="th"><img src="images/order-example-1.webp" alt="Idea 1" loading="lazy"></div><h3>Idea 1</h3><small>Minecraft animation</small><div class="btns"><a class="btn" href="/order">Order similar</a><a class="btn ghost" href="images/order-example-1.webp" target="_blank" rel="noopener">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-2.webp" alt="Idea 2" loading="lazy"></div><h3>Idea 2</h3><small>Minecraft animation</small><div class="btns"><a class="btn" href="/order">Order similar</a><a class="btn ghost" href="images/order-example-2.webp" target="_blank" rel="noopener">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-3.webp" alt="Idea 3" loading="lazy"></div><h3>Idea 3</h3><small>Minecraft animation</small><div class="btns"><a class="btn" href="/order">Order similar</a><a class="btn ghost" href="images/order-example-3.webp" target="_blank" rel="noopener">Preview</a></div></article></div></section>
+<div class="glass step"><b>01</b><h3 data-i18n="step.h1">Your idea</h3><p data-i18n="step.p1">Tell us what you want to see.</p></div>
+<div class="glass step"><b>02</b><h3 data-i18n="step.h2">The details</h3><p data-i18n="step.p2">Describe scenes, characters and anything that matters.</p></div>
+<div class="glass step"><b>03</b><h3 data-i18n="step.h3">Reference images</h3><p data-i18n="step.p3">Send images so we can match your vision.</p></div></div></section>
+<section class="reveal"><h2 class="t" data-i18n="work.h2">Our work <b>| Your ideas</b></h2><p class="sub" data-i18n="work.sub2">Get inspired by a few examples.</p><div class="grid g3 reveal"><article class="work"><div class="th"><img src="images/order-example-1.webp" alt="Idea 1" loading="lazy"></div><h3 data-i18n="work.idea1">Idea 1</h3><small data-i18n="work.small">Minecraft animation</small><div class="btns"><a class="btn" href="/order" data-i18n="work.similar">Order similar</a><a class="btn ghost" href="images/order-example-1.webp" target="_blank" rel="noopener" data-i18n="work.preview">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-2.webp" alt="Idea 2" loading="lazy"></div><h3 data-i18n="work.idea2">Idea 2</h3><small data-i18n="work.small">Minecraft animation</small><div class="btns"><a class="btn" href="/order" data-i18n="work.similar">Order similar</a><a class="btn ghost" href="images/order-example-2.webp" target="_blank" rel="noopener" data-i18n="work.preview">Preview</a></div></article><article class="work"><div class="th"><img src="images/order-example-3.webp" alt="Idea 3" loading="lazy"></div><h3 data-i18n="work.idea3">Idea 3</h3><small data-i18n="work.small">Minecraft animation</small><div class="btns"><a class="btn" href="/order" data-i18n="work.similar">Order similar</a><a class="btn ghost" href="images/order-example-3.webp" target="_blank" rel="noopener" data-i18n="work.preview">Preview</a></div></article></div></section>
 </main>
-<footer><div class="ft"><div class="about"><img src="images/logo.webp" alt="ImatorStudio"><p>We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p></div>
-<div class="cols"><div><h4>Pages</h4><a href="/">Home</a><a href="/team">Our Team</a><a href="/order">Order</a></div>
-<div><h4>Contact</h4><a href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer">Rubika ↗</a></div></div></div>
+<footer><div class="ft"><div class="about"><img src="images/logo.webp" alt="ImatorStudio"><p data-i18n="about.blurb">We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p></div>
+<div class="cols"><div><h4 data-i18n="footer.pages">Pages</h4><a href="/" data-i18n="nav.home">Home</a><a href="/team" data-i18n="nav.team">Our Team</a><a href="/order" data-i18n="nav.order">Order</a></div>
+<div><h4 data-i18n="footer.contact">Contact</h4><a href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer" data-i18n="footer.tg">Telegram ↗</a><a href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer" data-i18n="footer.rb">Rubika ↗</a></div></div></div>
 <div class="copy">© ImatorStudio <span class="year"></span>.</div></footer>
+<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
 </body></html>

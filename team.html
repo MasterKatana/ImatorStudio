@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta charset="utf-8"><script>if(/^https?:/.test(location.protocol)&&/\.html$/.test(location.pathname)){location.replace(location.pathname.replace(/(^|\/)(index)?\.html$/,"$1").replace(/\.html$/,"")+location.search+location.hash)}</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Our Team | ImatorStudio</title><meta name="description" content="Meet the ImatorStudio team.">
+<meta charset="utf-8"><script>try{if(localStorage.getItem("lang")==="fa"){var h=document.documentElement;h.lang="fa";h.dir="rtl"}}catch(e){}</script><script>if(/^https?:/.test(location.protocol)&&/\.html$/.test(location.pathname)){location.replace(location.pathname.replace(/(^|\/)(index)?\.html$/,"$1").replace(/\.html$/,"")+location.search+location.hash)}</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.team.title">Our Team | ImatorStudio</title><meta name="description" content="Meet the ImatorStudio team." data-i18n-attr="content:meta.team.desc">
 <link rel="icon" type="image/webp" href="images/favicon.webp"><link rel="apple-touch-icon" href="images/favicon.webp">
 <link rel="stylesheet" href="css/style.css">
 </head><body>
 <header><div class="bar">
 <a class="brand" href="/"><img src="images/logo.webp" alt="ImatorStudio"></a>
-<nav class="main" id="menu" aria-label="Main navigation"><a href="/">Home</a><a href="/team">Our Team</a><a href="/order">Order</a></nav>
-<div class="right"><a class="btn sm" href="/order">Order</a>
-<button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></div>
+<nav class="main" id="menu" aria-label="Main navigation" data-i18n-attr="aria-label:aria.nav"><a href="/" data-i18n="nav.home">Home</a><a href="/team" data-i18n="nav.team">Our Team</a><a href="/order" data-i18n="nav.order">Order</a></nav>
+<div class="right"><a class="btn sm" href="/order" data-i18n="nav.order">Order</a>
+<button class="btn ghost sm lang" id="langBtn" type="button" aria-label="Switch language" data-i18n-attr="aria-label:aria.lang">فارسی</button>
+<button class="burger" type="button" aria-label="Menu" data-i18n-attr="aria-label:aria.menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></div>
 </div></header>
 <main>
-<div class="page-head"><h1 class="px">Our team</h1><p>A team of passionate creators dedicated to making Minecraft animation better for everyone.</p></div><section class="team-grid" aria-label="Team members">
+<div class="page-head"><h1 class="px" data-i18n="team.h1">Our team</h1><p data-i18n="team.p">A team of passionate creators dedicated to making Minecraft animation better for everyone.</p></div><section class="team-grid" aria-label="Team members">
 <article class="glass member reveal"><div class="cover"></div><div class="body">
 <div class="avatar" data-fallback="MK"><img src="images/team/member-1.webp" alt="MrKatana" onerror="this.remove()"></div>
-<h2>MrKatana</h2><p class="handle">@MrKatana</p><p class="bio">Creative direction, ideas, and bringing the team together.</p><span class="role">Founder</span>
+<h2>MrKatana</h2><p class="handle">@MrKatana</p><p class="bio" data-i18n="bio.1">Creative direction, ideas, and bringing the team together.</p><span class="role" data-i18n="role.founder">Founder</span>
 <nav class="social" aria-label="MrKatana social links"><a href="https://www.youtube.com/@MrKatanaChannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="https://img.icons8.com/?size=100&id=NgVx6SS0Wbjb&format=png&color=ffffff" alt=""></a>
 <a href="https://discord.gg/VsxPGXaeUb" target="_blank" rel="noopener noreferrer" aria-label="Discord"><img src="https://img.icons8.com/?size=100&id=30888&format=png&color=ffffff" alt=""></a>
 <a href="https://www.instagram.com/_mrkatana_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="https://img.icons8.com/?size=100&id=59813&format=png&color=ffffff" alt=""></a></nav>
 </div></article>
 <article class="glass member reveal"><div class="cover"></div><div class="body">
 <div class="avatar" data-fallback="02"><img src="images/team/member-2.webp" alt="itz_Badcombo" onerror="this.remove()"></div>
-<h2>itz_Badcombo</h2><p class="handle">@itz_Badcombo</p><p class="bio">Minecraft 3D Model Artist | Blockbench</p><span class="role">Model Artist</span>
+<h2>itz_Badcombo</h2><p class="handle">@itz_Badcombo</p><p class="bio" data-i18n="bio.2">Minecraft 3D Model Artist.</p><span class="role" data-i18n="role.model">Model Artist</span>
 <nav class="social" aria-label="itz_Badcombo social links"><a href="https://www.aparat.com/Badcombo" target="_blank" rel="noopener noreferrer" aria-label="Aparat"><img src="images/aparat.webp" alt=""></a>
 <a href="https://discord.com/invite/mbQQ6AnjpQ" target="_blank" rel="noopener noreferrer" aria-label="Discord"><img src="https://img.icons8.com/?size=100&id=30888&format=png&color=ffffff" alt=""></a>
 <a href="https://www.instagram.com/mrbadcombo" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="https://img.icons8.com/?size=100&id=59813&format=png&color=ffffff" alt=""></a></nav>
 </div></article>
 <article class="glass member reveal"><div class="cover"></div><div class="body">
 <div class="avatar" data-fallback="03"><img src="images/team/member-3.webp" alt="QpAmir" onerror="this.remove()"></div>
-<h2>QpAmir</h2><p class="handle">@QpAmir</p><p class="bio">Skin maker with an eye for pixel art.</p><span class="role">Skin Maker</span>
+<h2>QpAmir</h2><p class="handle">@QpAmir</p><p class="bio" data-i18n="bio.3">Skin maker with an eye for pixel art.</p><span class="role" data-i18n="role.skin">Skin Maker</span>
 <nav class="social" aria-label="QpAmir social links"><a href="https://www.aparat.com/Qpamirr" target="_blank" rel="noopener noreferrer" aria-label="Aparat"><img src="images/aparat.webp" alt=""></a>
 <a href="https://rubika.ir/qpamirru" target="_blank" rel="noopener noreferrer" aria-label="Rubika"><img src="https://img.icons8.com/?size=100&id=RxCw0Qg9pOrG&format=png&color=FFFFFF" alt=""></a></nav>
 </div></article>
 <article class="glass member reveal"><div class="cover"></div><div class="body">
 <div class="avatar" data-fallback="04"><img src="images/team/member-4.webp" alt="Member Four" onerror="this.remove()"></div>
-<h2>Riptide</h2><p class="handle">@OfficialRiptide</p><p class="bio">Editor behind the final cut of every project.</p><span class="role">Editor</span>
+<h2>Riptide</h2><p class="handle">@OfficialRiptide</p><p class="bio" data-i18n="bio.4">Editor behind the final cut of every project.</p><span class="role" data-i18n="role.editor">Editor</span>
 <nav class="social" aria-label="Member Four social links"><a href="https://www.aparat.com/riptide" target="_blank" rel="noopener noreferrer" aria-label="Aparat"><img src="images/aparat.webp" alt=""></a>
 <a href="http://discord.gg/@NxtRiptid" target="_blank" rel="noopener noreferrer" aria-label="Discord"><img src="https://img.icons8.com/?size=100&id=30888&format=png&color=ffffff" alt=""></a>
 <a href="https://t.me/OfficialRiptide" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="https://img.icons8.com/?size=100&id=9R1sV3QvY18K&format=png&color=ffffff" alt=""></a></nav>
 </div></article>
 <article class="glass member reveal"><div class="cover"></div><div class="body">
 <div class="avatar" data-fallback="05"><img src="images/team/member-5.webp" alt="Member Five" onerror="this.remove()"></div>
-<h2>Member Five</h2><p class="handle">@username</p><p class="bio">A short introduction about this team member goes here.</p><span class="role">Animator</span>
+<h2 data-i18n="member.five">Member Five</h2><p class="handle">@username</p><p class="bio" data-i18n="bio.5">A short introduction about this team member goes here.</p><span class="role" data-i18n="role.animator">Animator</span>
 <nav class="social" aria-label="Member Five social links"><a href="YOUR_YOUTUBE_LINK" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="https://img.icons8.com/?size=100&id=NgVx6SS0Wbjb&format=png&color=ffffff" alt=""></a>
 <a href="YOUR_DISCORD_LINK" target="_blank" rel="noopener noreferrer" aria-label="Discord"><img src="https://img.icons8.com/?size=100&id=30888&format=png&color=ffffff" alt=""></a>
 <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="https://img.icons8.com/?size=100&id=59813&format=png&color=ffffff" alt=""></a></nav>
 </div></article>
 </section>
 </main>
-<footer><div class="ft"><div class="about"><img src="images/logo.webp" alt="ImatorStudio"><p>We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p></div>
-<div class="cols"><div><h4>Pages</h4><a href="/">Home</a><a href="/team">Our Team</a><a href="/order">Order</a></div>
-<div><h4>Contact</h4><a href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer">Rubika ↗</a></div></div></div>
+<footer><div class="ft"><div class="about"><img src="images/logo.webp" alt="ImatorStudio"><p data-i18n="about.blurb">We turn your ideas into awesome Minecraft animations with smooth movements and creative scenes.</p></div>
+<div class="cols"><div><h4 data-i18n="footer.pages">Pages</h4><a href="/" data-i18n="nav.home">Home</a><a href="/team" data-i18n="nav.team">Our Team</a><a href="/order" data-i18n="nav.order">Order</a></div>
+<div><h4 data-i18n="footer.contact">Contact</h4><a href="https://t.me/MrKatana_Real" target="_blank" rel="noopener noreferrer" data-i18n="footer.tg">Telegram ↗</a><a href="https://rubika.ir/@ImatorStudioSupport" target="_blank" rel="noopener noreferrer" data-i18n="footer.rb">Rubika ↗</a></div></div></div>
 <div class="copy">© ImatorStudio <span class="year"></span>.</div></footer>
+<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
 </body></html>
