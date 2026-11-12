@@ -12,4 +12,6 @@ d.querySelectorAll('.social a[href^="YOUR_"]').forEach(a=>a.remove());
 // scroll reveal
 if(!('IntersectionObserver' in window)){d.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'))}else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 d.querySelectorAll('.reveal').forEach(el=>io.observe(el))}
+// offline cache
+if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}))}
 })();
